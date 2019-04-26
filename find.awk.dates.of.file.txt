@@ -1,0 +1,1 @@
+find /var/opt/intellinx/ca/queues/onlinebanking/ -maxdepth 3 -type f -printf '%TD %s\n' | awk '{b[$1]+=$2} END{for (date in b) print date, b[date]}' | sort
